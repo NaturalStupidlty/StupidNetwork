@@ -1,6 +1,8 @@
 #ifndef NEURALNETWORK_NEURALNETWORK_H
 #define NEURALNETWORK_NEURALNETWORK_H
 
+// https://eigen.tuxfamily.org/index.php?title=Main_Page
+
 #include "../eigen/Eigen/Eigen" // бібліотека для роботи з лінійною алгеброю
 #include <iostream>
 #include <vector>
