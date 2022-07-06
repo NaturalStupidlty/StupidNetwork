@@ -1,17 +1,18 @@
 #include "NeuralNetwork.h"
+#include <cmath>
 
 using namespace std;
 
 Scalar activationFunction(Scalar x)
 {
     // нелінійна функція для активації
-    return tanhf(x);
+    return (1 / (1 + exp(-x)));
 }
 
 Scalar activationFunctionDerivative(Scalar x)
 {
     // похідна
-    return 1 + tanhf(x) * tanhf(x);
+    return (exp(-x) / (float) pow((1 + exp(-x)), 2));
 }
 
 NeuralNetwork::NeuralNetwork(vector<uint> topology, Scalar learningRate)
